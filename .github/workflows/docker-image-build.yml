@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: "Docker image build"
-         run: docker image build -t aariasoman/java-app:v1 .
+        run: docker image build -t aariasoman/java-app:v1 .
