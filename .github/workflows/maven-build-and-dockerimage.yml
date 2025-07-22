@@ -21,7 +21,7 @@ jobs:
           
       - name: "Build with Maven"
         run: mvn clean  package
-        working-directory: ./
+        working-directory: ./Application/
 
       - name: "Docker image build"
         run: docker image build -t aariasoman/java-app:v1 .

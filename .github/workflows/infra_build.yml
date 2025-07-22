@@ -15,29 +15,29 @@ jobs:
       TERRAFORM_VERSION: "1.12.2"
     steps:
       - name: "Checkout Source Code"
-        uses: actions/checkout@v4
+        uses: action./Terraform/checkout@v4
 
       - name: Terraform Installation
-        uses: hashicorp/setup-terraform@v3
+        uses: hashicor./Terraform/setup-terraform@v3
         with:
           terraform_version: ${{ env.TERRAFORM_VERSION }}
 
       - name: Terraform init
         run: terraform init 
-        working-directory: ./
+        working-directory: ./Terraform/
 
       - name: Terraform fmt
         run: terraform fmt
-        working-directory: ./
+        working-directory: ./Terraform/
 
       - name: Terraform validate
         run: terraform validate
-        working-directory: ./
+        working-directory: ./Terraform/
 
       - name: Terraform plan
         run: terraform plan 
-        working-directory: ./
+        working-directory: ./Terraform/
 
       - name: Terraform apply
         run: terraform apply -auto-approve 
-        working-directory: ./
+        working-directory: ./Terraform/
