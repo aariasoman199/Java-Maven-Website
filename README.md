@@ -1,38 +1,31 @@
-# sample-code
-sample
+# Java Maven Application Deployment with Docker and Terraform via GitHub Actions
+
+This repository demonstrates a complete CI/CD pipeline to:
+
+- Build a Java Maven application
+- Package it into a Docker image
+- Push it to Docker Hub
+- Deploy infrastructure on AWS EC2 using Terraform
+- Run the application inside a Docker container on the provisioned EC2 instance
+
+---
+
+## ⚙️ CI/CD Workflows
+
+### 1️⃣ Maven Build & Docker Image Push
+
+- Checks out the code
+- Sets up Java 17
+- Builds the Java Maven project located in `./Application/`
+- Builds a Docker image using the `Dockerfile`
+- Pushes the image to Docker Hub
+
+### 2️⃣ Terraform Infrastructure Deployment
+
+- Checks out the Terraform scripts
+- Installs Terraform (version 1.12.2)
+- Initializes and validates Terraform configuration
+- Provisions infrastructure (EC2 instance, Route53 DNS record)
+- Pulls and runs the Docker image on the EC2 instance
 
 
-# To build code
-
-` mvn clean package ` 
-
-then create docker image
-
-FROM eclipse-temurin:17-jre-alpine
-target/java17-webapp-1.0.0.jar
-
-
-java -jar <path>/java17-webapp-1.0.0.jar
-
-
-docker build ..........
-docker login , docker push
-
-
-then using terraform , create an ec2 instance
-ami-0a1235697f4afa8a4
-
-in userdata, install docker and java17
-then do a docker pull <image name>
-docker run -p 8080:8080 <image name>
-
-then create A record of IP , url should be like http://<project-name>-<project-env>.chottu.shop
-
-
-
-2 workflow
-
-1 build using maven and docker build & push
-
-2. deploy infra
-3.  destory infra
