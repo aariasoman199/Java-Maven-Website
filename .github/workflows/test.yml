@@ -45,6 +45,7 @@ jobs:
 
       - name: "push docker image"
         run: |
+          SANITIZED_BRANCH_NAME="${GITHUB_BRANCH_NAME//\//-}"
           docker push aariasoman/java-web-app:${SANITIZED_BRANCH_NAME}-${{ github.run_number }}
           docker push aariasoman/java-web-app:latest
            
