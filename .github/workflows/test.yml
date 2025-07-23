@@ -4,8 +4,7 @@ name:  "test  build"
 on:
   push:
     branches:
-      - main
-      - releases/feature1
+      - '**'
 jobs:
   build-maven:
     name: "Maven Build"
