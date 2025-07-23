@@ -2,7 +2,10 @@
 name: "Deploy Infrastructure with Terraform"
 
 on:
-  workflow_dispatch:
+  workflow_run:
+    workflows: ["Maven Build and docker image build"]
+    types:
+      - completed
 
 jobs:
   deploy-infra:
