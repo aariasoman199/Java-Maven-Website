@@ -44,4 +44,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
       - name: "push docker image"
-        run: docker push aariasoman/java-app:v1    
+        run: |
+          docker push aariasoman/java-web-app:${SANITIZED_BRANCH_NAME}-${{ github.run_number }}
+          docker push aariasoman/java-web-app:latest
+           
