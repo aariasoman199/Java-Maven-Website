@@ -29,3 +29,4 @@ This repository demonstrates a complete CI/CD pipeline to:
 - Pulls and runs the Docker image on the EC2 instance
 
 
+
