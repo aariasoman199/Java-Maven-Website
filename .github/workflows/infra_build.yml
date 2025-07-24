@@ -2,7 +2,10 @@
 name: "Deploy Infrastructure with Terraform"
 
 on:
-  workflow_dispatch:
+  workflow_run:
+    workflows: ["Maven Build and docker image build"]
+    types:
+      - completed
 
 jobs:
   deploy-infra:
@@ -15,10 +18,10 @@ jobs:
       TERRAFORM_VERSION: "1.12.2"
     steps:
       - name: "Checkout Source Code"
-        uses: action./Terraform/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Terraform Installation
-        uses: hashicor./Terraform/setup-terraform@v3
+        uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: ${{ env.TERRAFORM_VERSION }}
 
