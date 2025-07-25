@@ -33,7 +33,7 @@ jobs:
           echo "Raw branch name: $GITHUB_BRANCH_NAME"
           SANITIZED_BRANCH_NAME="${GITHUB_BRANCH_NAME//\//-}"
           echo "Sanitized branch name: $SANITIZED_BRANCH_NAME"
-          docker image build -t aariasoman/java-web-app:${SANITIZED_BRANCH_NAME}-${{ github.run_number }} -t aariasoman/java-web-app:latest .
+          docker image build -t aariasoman/java-web-app:${SANITIZED_BRANCH_NAME}-${{ github.sha }} -t aariasoman/java-web-app:latest .
 
         working-directory: ./Application/
 
