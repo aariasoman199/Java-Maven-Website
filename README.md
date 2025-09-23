@@ -10,7 +10,7 @@ This repository demonstrates a complete CI/CD pipeline to:
 
 ---
 
-## ⚙️ CI/CD Workflows
+## ⚙️ CI/CD Workflows 
 
 ### 1️⃣ Maven Build & Docker Image Push
 
