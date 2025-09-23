@@ -27,7 +27,7 @@ This repository demonstrates a complete CI/CD pipeline to:
 - Initializes and validates Terraform configuration
 - Provisions infrastructure (EC2 instance, Route53 DNS record)
 - Pulls and runs the Docker image on the EC2 instance
-- testing
+
 
 
 
