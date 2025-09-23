@@ -20,7 +20,7 @@ This repository demonstrates a complete CI/CD pipeline to:
 - Builds a Docker image using the `Dockerfile`
 - Pushes the image to Docker Hub : [aariasoman/java-app](https://hub.docker.com/r/aariasoman/java-app)
 
-### 2️⃣ Terraform Infrastructure Deployment
+### 2️⃣ Terraform Infrastructure Deployment 
 
 - Checks out the Terraform scripts
 - Installs Terraform (version 1.12.2)
