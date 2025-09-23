@@ -12,7 +12,7 @@ This repository demonstrates a complete CI/CD pipeline to:
 
 ## ⚙️ CI/CD Workflows 
 
-### 1️⃣ Maven Build & Docker Image Push
+### 1️⃣ Maven Build & Docker Image Push 
 
 - Checks out the code
 - Sets up Java 17
